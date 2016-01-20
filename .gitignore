@@ -45,12 +45,7 @@ Thumbs.db
 ######################
 
 node_modules/
-.sass-cache/
-public/stylesheets/*.css
-public/min/
-public/index.html
-vendor/*
-public/fonts
+
 
 # Logs
 logs
