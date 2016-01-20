@@ -1,0 +1,32 @@
+{
+  "name": "project-manager",
+  "description": "a project-manager for my portfolio and clients",
+  "main": "server.js",
+  "authors": [
+    "aidan boyle"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/boylecreations/ProjectManager",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0",
+    "moment": "~2.11.1",
+    "font-awesome": "~4.5.0",
+    "animate.css": "~3.5.1",
+    "requirejs": "~2.1.22"
+  }
+}

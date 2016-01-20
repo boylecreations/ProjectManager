@@ -1,0 +1,33 @@
+{
+  "name": "project-manager",
+  "version": "1.0.0",
+  "description": "a project-manager for my portfolio and clients",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boylecreations/ProjectManager.git"
+  },
+  "author": "aidan boyle",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boylecreations/ProjectManager/issues"
+  },
+  "homepage": "https://github.com/boylecreations/ProjectManager#readme",
+  "dependencies": {
+    "babel": "^6.3.26",
+    "body-parser": "^1.14.2",
+    "browserify": "^13.0.0",
+    "express": "^4.13.3",
+    "grunt": "^0.4.5",
+    "gulp": "^3.9.0",
+    "method-override": "^2.3.5",
+    "mongodb": "^2.1.4",
+    "mongoose": "^4.3.6",
+    "morgan": "^1.6.1",
+    "sass": "^0.5.0"
+  }
+}
