@@ -1,6 +1,6 @@
 // app/routes.js
 
-// grab the nerd model we just created
+// grab the user model 
 var User           = require('./models/user');
 var path           = require('path');
 
