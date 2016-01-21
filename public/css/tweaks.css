@@ -58,7 +58,7 @@ behavior: url(css/PIE.htc);}
 
 .feature-icon { display: none; }
 .feature-content { width: auto; }
-.features-bg { background: url('../img/office-job-pink.jpg') no-repeat center center; background-size: cover; }
+.features-bg { background: url('./img/media/stock/office-job-pink.jpg') no-repeat center center; background-size: cover; }
 
 .download { background: #333; }
 
@@ -134,39 +134,29 @@ section.video { background: #222; color: white; }
 
 .modal-body .feature-content { display: block !important; }
 /*==========  Mobile First Method  ==========*/
- 
+
 	/* Custom, iPhone Retina */
 	@media only screen and (min-width : 320px){
- 		
+
 	}
- 
+
 	/* Extra Small Devices, Phones */
 	@media only screen and (min-width : 480px){
- 		
+
 	}
- 
+
 	/* Small Devices, Tablets */
 	@media only screen and (min-width : 768px){
 		 	.hero { min-height: 800px !important; }
 		 	.features-slider { padding: 11% 50px 10% 50px; }
 	}
- 
+
 	/* Medium Devices, Desktops */
 	@media only screen and (min-width : 992px){
- 
+
 	}
- 
+
 	/* Large Devices, Wide Screens */
 	@media only screen and (min-width : 1200px){
- 
+
 	}
-
-
-
-
-
-
-
-
-
-
