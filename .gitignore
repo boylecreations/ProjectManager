@@ -44,13 +44,16 @@ Thumbs.db
 # Node generated files #
 ######################
 
-/node_modules/
+/node_modules
 .sass-cache/
 public/stylesheets/*.css
 public/min/
 public/index.html
 vendor/*
 public/fonts
+/*.env
+
+
 
 # Logs
 logs
