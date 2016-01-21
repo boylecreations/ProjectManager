@@ -1,6 +1,9 @@
 {
   "name": "project-manager",
   "version": "1.0.0",
+  "engines": {
+    "node": "4.1.2"
+  },
   "description": "a project-manager for my portfolio and clients",
   "main": "server.js",
   "scripts": {
