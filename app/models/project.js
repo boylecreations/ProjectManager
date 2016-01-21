@@ -7,24 +7,22 @@ var jwt = require('jsonwebtoken');
 var Schema = mongoose.Schema;
 
 // create a schema
-var userSchema = new Schema({
+
+var projectSchema = new Schema({
   name: String,
-  username: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  avatar: { type: String },
-  admin: Boolean,
-  meta: {
-    age: Number,
-    website: String
-  },
+  client: String,
+  client_url: String,
+  project_url: String,
+  testimonial: String,
+  cover_img: String,
+  thumb_img: String
   created_at: Date,
   updated_at: Date,
   hash: String,
   salt: String
 });
 
-userSchema.pre('save', function(next) {
+projectSchema.pre('save', function(next) {
     // get the Date
     var currentDate = new Date();
 
@@ -37,15 +35,15 @@ userSchema.pre('save', function(next) {
     next();
 });
 
-userSchema.methods.validateUser = function() {
+projectSchema.methods.validateUser = function() {
   if (err) throw err;
   console.log("User Validated");
 }
 
-userSchema.methods.timeStamp = function() {
+projectSchema.methods.timeStamp = function() {
   if (err) throw err;
   console.log("Timestamp applied");
 }
 
 // make this available to our users in our Node applications
-module.exports = mongoose.model('User', userSchema);
+module.exports = mongoose.model('Project', projectSchema);
