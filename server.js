@@ -7,6 +7,8 @@ var bodyParser     = require('body-parser');
 var methodOverride = require('method-override');
 var morgan         = require('morgan');
 
+var mongoose       = require('mongoose');
+
 // configure app
 app.use(morgan('dev')); // log requests to the console
 

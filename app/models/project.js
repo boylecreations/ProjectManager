@@ -15,7 +15,7 @@ var projectSchema = new Schema({
   project_url: String,
   testimonial: String,
   cover_img: String,
-  thumb_img: String
+  thumb_img: String,
   created_at: Date,
   updated_at: Date,
   hash: String,
