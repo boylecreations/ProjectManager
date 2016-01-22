@@ -48,11 +48,11 @@ router.get('/', function(req, res) {
     //next();
 });
 
-// on routes that end in /bears
+// on routes that end in /users
 // ----------------------------------------------------
 router.route('/users')
 
-    // create a bear (accessed at POST http://localhost:8080/api/bears)
+    // create a user (accessed at POST http://localhost/api)
     .post(function(req, res) {
 
         var user = new User({
@@ -66,12 +66,8 @@ router.route('/users')
                 age: req.body.age,
                 website: req.body.website
             }
-        });      // create a new instance of the Bear model
-        //user.name = req.body.name;  // set the bears name (comes from the request)
-        //user.username = req.body.username
-        //return res.json({ message: req.body.name});
-        //bear.name = 'Bumblebeetuna';
-        //bear.color = 'Brown';
+        });      // create a new instance of the User model
+
 
         // save the bear and check for errors
         user.save(function(err) {
@@ -154,6 +150,109 @@ router.route('/users/:user_id')
             res.json({ message: 'Successfully deleted' });
         });
     });
+
+
+// Project ROUTES
+
+// on routes that end in /users
+// ----------------------------------------------------
+router.route('/projects')
+
+    // create a bear (accessed at POST http://localhost/api)
+    .post(function(req, res) {
+
+        var project = new Project({
+            name: req.body.name,
+            client: req.body.client,
+            client_url: req.body.client_url,
+            project_url: req.body.project_url,
+            testimonial: req.body.testimonial,
+            cover_img: req.body.cover_img,
+            thumb_img: req.body.thumb_img
+        });
+
+        // save the project and check for errors
+        project.save(function(err) {
+            if (err) {
+                console.log(err);
+                res.send({
+                    message: 'Something went Wrong during Submission'
+                });
+            } else {
+                res.send({
+                    message: 'Project created Successfully'
+                });
+            }
+        });
+    })
+
+    .get(function(req, res) {
+        Project.find(function(err, projects) {
+            if (err)
+                res.send(err);
+            res.json(projects);
+        });
+    });
+
+// on routes that end in /bears/:bear_id
+// ----------------------------------------------------
+router.route('/projects/:project_id')
+
+// get the bear with that id (accessed at GET http://localhost:8080/api/bears/:bear_id)
+    .get(function(req, res) {
+        Project.findById(req.params.project_id, function(err, user) {
+            if (err)
+                res.send(err);
+            res.json(user);
+        });
+    })
+
+    // update the bear with this id (accessed at PUT http://localhost:8080/api/bears/:bear_id)
+    .put(function(req, res) {
+
+        // use our bear model to find the bear we want
+        Project.findById(req.params.user_id, function(err, user) {
+
+            if (err)
+                res.send(err);
+
+            // update project info
+            /*var user = new User({
+                user.name = req.body.name;
+                user.username = req.body.username;
+                user.password = req.body.password;
+                user.email = req.body.email;
+                user.avatar = req.body.avatar;
+                user.admin = false;
+                user.meta.age = req.body.age;
+                user.meta.website = req.body.website;
+
+            }); */
+            project.__v++;
+
+            // save the bear
+            project.save(function(err) {
+                if (err)
+                    res.send(err);
+
+                res.json({ message: 'Project updated!' });
+            });
+
+        });
+    })
+
+    // delete the bear with this id (accessed at DELETE http://localhost:8080/api/bears/:bear_id)
+    .delete(function(req, res) {
+        Project.remove({
+            _id: req.params.user_id
+        }, function(err, project) {
+            if (err)
+                res.send(err);
+
+            res.json({ message: 'Successfully deleted' });
+        });
+    });
+
 
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api

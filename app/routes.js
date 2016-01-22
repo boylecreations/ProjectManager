@@ -1,7 +1,8 @@
 // app/routes.js
 
-// grab the user model 
+// grab the route models
 var User           = require('./models/user');
+var Project        = require('./models/project');
 var path           = require('path');
 
     module.exports = function(app) {
@@ -13,11 +14,21 @@ var path           = require('path');
         // users api route
         app.get('/api/users', function(req, res) {
             // use mongoose to get all users in the database
-            User.find(function(err, nerds) {
+            User.find(function(err, users) {
 
                 // if there is an error retrieving, send the error.
                 if (err) res.send(err);
                 res.json(users); // return all users in JSON format
+            });
+        });
+
+        app.get('/api/projects', function(req, res) {
+            // use mongoose to get all users in the database
+            Project.find(function(err, projects) {
+
+                // if there is an error retrieving, send the error.
+                if (err) res.send(err);
+                res.json(projects); // return all users in JSON format
             });
         });
 

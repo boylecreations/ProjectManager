@@ -10,13 +10,6 @@ angular.module('appRoutes', ['ngResource']).config(['$routeProvider', '$location
             activetab: 'home'
         })
 
-        // nerds page that will use the NerdController
-        .when('/nerds', {
-            templateUrl: 'views/nerd.html',
-            controller: 'NerdController',
-            activetab: 'nerd'
-
-        })
 
         .when('/users', {
             templateUrl: 'views/users.html',
@@ -48,7 +41,15 @@ angular.module('appRoutes', ['ngResource']).config(['$routeProvider', '$location
             activetab: 'contact'
         })
 
-        .otherwise({ redirectTo: "/users"});
+        .when('/projects', {
+            templateUrl: 'views/projects.html',
+            controller: 'ProjectController',
+            activetab: 'projects'
+        })
+
+
+
+        .otherwise({ redirectTo: "/"});
 
 
 

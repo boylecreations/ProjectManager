@@ -17,9 +17,9 @@ var projectSchema = new Schema({
   cover_img: String,
   thumb_img: String,
   created_at: Date,
-  updated_at: Date,
+  updated_at: Date/*,
   hash: String,
-  salt: String
+  salt: String*/
 });
 
 projectSchema.pre('save', function(next) {
@@ -35,10 +35,10 @@ projectSchema.pre('save', function(next) {
     next();
 });
 
-projectSchema.methods.validateUser = function() {
+/*projectSchema.methods.validateUser = function() {
   if (err) throw err;
   console.log("User Validated");
-}
+}*/
 
 projectSchema.methods.timeStamp = function() {
   if (err) throw err;

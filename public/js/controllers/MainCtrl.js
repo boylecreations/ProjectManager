@@ -1,5 +1,3 @@
-var mainApp = angular.module('MainCtrl', []);
-
-mainApp.controller('MainController', function($scope) {
+angular.module('MainCtrl', []).controller('MainController', function($scope) {
     $scope.brand = "Boyle Creations LLC";
 });

@@ -37,10 +37,10 @@ userSchema.pre('save', function(next) {
     next();
 });
 
-userSchema.methods.validateUser = function() {
+/*userSchema.methods.validateUser = function() {
   if (err) throw err;
   console.log("User Validated");
-}
+}*/
 
 userSchema.methods.timeStamp = function() {
   if (err) throw err;
