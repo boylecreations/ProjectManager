@@ -1,5 +1,5 @@
 
-angular.module('appRoutes', ['ui.router'])
+angular.module('appRoutes', ['ui.router', 'ngResource'])
     .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
         $urlRouterProvider.otherwise('/');
 
@@ -31,7 +31,7 @@ angular.module('appRoutes', ['ui.router'])
 
 
 // public/js/appRoutes.js
-angular.module('appRoutes', ['ngResource']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+/*angular.module('appRoutes', ['ngResource']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
     $routeProvider
 
@@ -89,4 +89,4 @@ angular.module('appRoutes', ['ngResource']).config(['$routeProvider', '$location
 
     $locationProvider.html5Mode(true);
 
-}]);
+}]);*/

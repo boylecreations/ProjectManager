@@ -3,7 +3,7 @@ angular.module('ContactCtrl', [])
 .controller('ContactController', function($scope) {
     $scope.tagline = "This is for my contact view";
 });
-
+/*
 $(document).ready(function() {
   $('#contact_form').bootstrapValidator({
       // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -124,4 +124,4 @@ $(document).ready(function() {
               console.log(result);
           }, 'json');
       });
-});
+});*/
