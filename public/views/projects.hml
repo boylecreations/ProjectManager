@@ -1,1 +1,14 @@
-this is the projects view
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+<h1>this is the projects view</h1>
+{{ $scope.pagetitle}}

@@ -1,3 +1,1 @@
-angular.module('bcApp',
-['ngRoute', 'appRoutes', 'MainCtrl', 'ProjectService', 'UserService',
- 'UserEditCtrl', 'UserShowCtrl', 'ContactCtrl', 'UserIndexCtrl']);
+angular.module('bcApp', ['ngRoute', 'appRoutes', 'MainCtrl', 'ProjectService', 'UserService', 'UserCtrl', 'UserEditCtrl', 'UserShowCtrl', 'ContactCtrl', 'UserIndexCtrl', 'ProjectCtrl']);

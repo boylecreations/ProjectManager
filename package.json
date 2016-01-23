@@ -9,7 +9,9 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "browserify browser.js -o bundle.js",
+    "watch": "watchify browser.js -o bundle.js"
   },
   "repository": {
     "type": "git",
@@ -35,6 +37,7 @@
     "mongoose": "^4.3.6",
     "morgan": "^1.6.1",
     "sass": "^0.5.0",
-    "underscore": "^1.8.3"
+    "underscore": "^1.8.3",
+    "watchify": "^3.7.0"
   }
 }

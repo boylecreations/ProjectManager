@@ -1,7 +1,5 @@
 
-var userApp = angular.module('UserCtrl', []);
-
-userApp.controller('UserController', function($scope, $route, $http) {
+angular.module('UserCtrl', []).controller('UserController', function($scope, $route, $http) {
 
   $scope.$route = $route;
 

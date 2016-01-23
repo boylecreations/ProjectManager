@@ -1,3 +1,32 @@
+
+angular.module('appRoutes', ['ui.router'])
+    .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
+        $urlRouterProvider.otherwise('/');
+
+        $stateProvider.state('home', {
+            url: '/',
+            templateUrl: 'views/home.html',
+            activetab: 'home',
+            controller: 'js/controllers/MainCtrl'
+        })
+        .state('users', {
+            url: '/',
+            templateUrl: 'views/users.html',
+            activetab: 'users'
+        })
+        .state('projects', {
+            url: '/',
+            templateUrl: 'views/projects.html',
+            activetab: 'projects'
+        })
+        .state('contact', {
+            url: '/',
+            templateUrl: 'views/contact.html',
+            activetab: 'contact'
+        })
+    }]);
+
+
 // public/js/appRoutes.js
 angular.module('appRoutes', ['ngResource']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
