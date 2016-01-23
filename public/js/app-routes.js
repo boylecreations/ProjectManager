@@ -7,22 +7,25 @@ angular.module('appRoutes', ['ui.router'])
             url: '/',
             templateUrl: 'views/home.html',
             activetab: 'home',
-            controller: 'js/controllers/MainCtrl'
+            controller: 'MainCtrl'
         })
         .state('users', {
             url: '/',
             templateUrl: 'views/users.html',
-            activetab: 'users'
+            activetab: 'users',
+            controller: 'UserCtrl'
         })
         .state('projects', {
             url: '/',
             templateUrl: 'views/projects.html',
-            activetab: 'projects'
+            activetab: 'projects',
+            controller: 'ProjectCtrl'
         })
         .state('contact', {
             url: '/',
             templateUrl: 'views/contact.html',
-            activetab: 'contact'
+            activetab: 'contact',
+            controller: 'ContactCtrl'
         })
     }]);
 
