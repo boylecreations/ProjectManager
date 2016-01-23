@@ -40,8 +40,8 @@ ehthumbs.db
 Thumbs.db
 
 # Protected Files #
-config/db.js
-db.js
+/config/db.js
+
 
 
 # Node generated files #
