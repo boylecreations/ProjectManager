@@ -1,7 +1,7 @@
 #logo-box a { font-size: 20px; color: white; font-weight: thin; }
 .modal-header #logo-box a { font-size: 14px; }
 
-.hero { /* background-image: url('../img/watercolor-bg-vertical.jpg'); */ background: url('../img/vibranium1920.jpg'); background-size: cover; background-repeat: no-repeat;}
+.hero { /* background-image: url('../img/watercolor-bg-vertical.jpg'); */ background: url('../img/media/stock/pink_coffee.jpg'); background-size: cover; background-repeat: no-repeat;}
 .hero h1 { font-size: 36px; }
 
 .hero .texture-overlay { opacity: 0.5; }

@@ -1,14 +1,13 @@
 
 angular.module('appRoutes', ['ui.router', 'ngResource'])
-    .config(['$urlRouterProvider', '$stateProvider', function($urlRouterProvider, $stateProvider) {
+    .config(['$urlRouterProvider', '$stateProvider', '$locationProvider', function($urlRouterProvider, $stateProvider, $locationProvider) {
         $urlRouterProvider.otherwise('/');
 
         $stateProvider.state('home', {
             url: '/',
+            controller: 'MainController as MC',
             templateUrl: 'views/home.html',
-            activetab: 'home',
-            controller: 'MainController',
-            controllerAs: 'MC'
+            activetab: 'home'    
         })
         .state('about', {
             url: '/about',
@@ -21,7 +20,7 @@ angular.module('appRoutes', ['ui.router', 'ngResource'])
             url: '/contact',
             templateUrl: 'views/contact.html',
             activetab: 'contact',
-            controller: 'ContactCtrl',
+            controller: 'ContactController',
             controllerAs: 'CC'
         })
         .state('users', {
@@ -38,13 +37,24 @@ angular.module('appRoutes', ['ui.router', 'ngResource'])
             controller: 'ProjectController',
             controllerAs: 'PC'
         })
+        .state('posts', {
+            url: '/posts',
+            templateUrl: 'views/posts.html',
+            activetab: 'posts',
+            controller: 'PostController',
+            controllerAs: 'PostsC'
+        })
         .state('admin', {
             url: '/admin',
-            templateUrl: 'js/components/admin/admin.html',
+            templateUrl: 'js/components/admin/dashboard.html',
             activetab: 'admin',
-            controller: 'AdminController',
+            controller: 'DashboardController',
             controllerAs: 'DC'
         })
+
+        // Eliminate the Hash- Pretty URL, use the HTML5 History API
+        $locationProvider.html5Mode(true);
+
     }]);
 
 
