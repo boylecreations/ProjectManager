@@ -7,31 +7,50 @@ angular.module('appRoutes', ['ui.router', 'ngResource'])
             url: '/',
             templateUrl: 'views/home.html',
             activetab: 'home',
-            controller: 'MainCtrl'
+            controller: 'MainController',
+            controllerAs: 'MC'
         })
-        .state('users', {
-            url: '/',
-            templateUrl: 'views/users.html',
+        .state('about', {
+            url: '/about',
+            templateUrl: 'views/about.html',
             activetab: 'users',
-            controller: 'UserCtrl'
-        })
-        .state('projects', {
-            url: '/',
-            templateUrl: 'views/projects.html',
-            activetab: 'projects',
-            controller: 'ProjectCtrl'
+            controller: 'AboutController',
+            controllerAs: 'AbC'
         })
         .state('contact', {
-            url: '/',
+            url: '/contact',
             templateUrl: 'views/contact.html',
             activetab: 'contact',
-            controller: 'ContactCtrl'
+            controller: 'ContactCtrl',
+            controllerAs: 'CC'
+        })
+        .state('users', {
+            url: '/users',
+            templateUrl: 'views/users.html',
+            activetab: 'users',
+            controller: 'UserController',
+            controllerAs: 'UC'
+        })
+        .state('projects', {
+            url: '/projects',
+            templateUrl: 'views/projects.html',
+            activetab: 'projects',
+            controller: 'ProjectController',
+            controllerAs: 'PC'
+        })
+        .state('admin', {
+            url: '/admin',
+            templateUrl: 'js/components/admin/admin.html',
+            activetab: 'admin',
+            controller: 'AdminController',
+            controllerAs: 'DC'
         })
     }]);
 
 
-// public/js/appRoutes.js
-/*angular.module('appRoutes', ['ngResource']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+// public/js/appRoutes.js via ngRoute DEPRECATED
+/*
+angular.module('appRoutes', ['ngResource']).config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 
     $routeProvider
 
@@ -89,4 +108,5 @@ angular.module('appRoutes', ['ui.router', 'ngResource'])
 
     $locationProvider.html5Mode(true);
 
-}]);*/
+}]);
+*/
