@@ -35,10 +35,10 @@ projectSchema.pre('save', function(next) {
     next();
 });
 
-/*projectSchema.methods.validateUser = function() {
+projectSchema.methods.validateUser = function() {
   if (err) throw err;
   console.log("User Validated");
-}*/
+}
 
 projectSchema.methods.timeStamp = function() {
   if (err) throw err;

@@ -1,1 +1,19 @@
-i am a project single
+
+		<div class="col-sm-12" style="height:500px; background:white;">
+
+			<ul class="list-group">
+I am the project Page. 	{{ title }}
+				<li class="list-group-item" ng-repeat="post in posts">
+					<a href="{{post.slug}}">
+						{{post.title}}
+					</a>
+				</li>
+			</ul>
+			<ul class="list-group">
+				<li class="media" ng-repeat="page in pages">
+					<a href="{{post.slug}}">
+						{{post.title}}
+					</a>
+				</li>
+			</ul>
+		</div>

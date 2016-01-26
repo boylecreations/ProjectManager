@@ -1,18 +1,11 @@
 
-		<div class="col-sm-12" style="height:500px; background:white;">
+		<div class="col-sm-12" style="height:; background:white;">
 			{{ tagline }}
 			<ul class="list-group">
-I am the posts Page. 	{{ title }}
-				<li class="list-group-item" ng-repeat="post in posts">
-					<a ng-href="{{post.permalink}}">
-						{{post.title}}
-					</a>
-				</li>
-			</ul>
-			<ul class="list-group">
-				<li class="media" ng-repeat="page in pages">
-					<a ng-href="{{post.permalink}}">
-						{{post.title}}
+				<li class="list-group-item" ng-repeat="post in posts" >
+					<a ng-href="{{post.link}}">
+						<h1>{{post.title.rendered}}</h1>
+						{{post.content.rendered}}
 					</a>
 				</li>
 			</ul>
