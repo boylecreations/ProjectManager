@@ -22,6 +22,7 @@ var path           = require('path');
             });
         });
 
+
         app.get('/api/projects', function(req, res) {
             // use mongoose to get all users in the database
             Project.find(function(err, projects) {

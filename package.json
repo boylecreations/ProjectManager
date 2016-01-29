@@ -31,6 +31,7 @@
     "express": "^4.13.3",
     "grunt": "^0.4.5",
     "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1",
     "jsonwebtoken": "^5.5.4",
     "method-override": "^2.3.5",
     "mongodb": "^2.1.4",
@@ -39,5 +40,9 @@
     "sass": "^0.5.0",
     "underscore": "^1.8.3",
     "watchify": "^3.7.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.1.1"
   }
 }

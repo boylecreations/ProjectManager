@@ -12,16 +12,16 @@ var userSchema = new Schema({
   username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  avatar: { type: String },
+  /*avatar: { type: String },
   admin: Boolean,
   meta: {
     age: Number,
     website: String
-  },
+  },*/
   created_at: Date,
   updated_at: Date,
-  hash: String,
-  salt: String
+  /*hash: String,
+  salt: String*/
 });
 
 userSchema.pre('save', function(next) {

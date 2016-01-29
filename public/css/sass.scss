@@ -1,0 +1,12 @@
+@include sticky-footer(50px)
+
+.spacing
+  padding-top: 20px
+  padding-bottom:20px
+
+
+#footer
+  background: #333
+
+#dashboard-control 
+  @extend .spacing

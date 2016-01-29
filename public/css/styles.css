@@ -1093,3 +1093,8 @@ Waypoints
     -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
+
+
+/* easy inserts */
+
+#dashboard-control { padding-top:20px; padding-bottom: 20px;}

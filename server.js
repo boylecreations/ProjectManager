@@ -60,12 +60,12 @@ router.route('/users')
             username: req.body.username,
             password: req.body.password,
             email: req.body.email,
-            avatar: req.body.avatar,
+            /*avatar: req.body.avatar,
             admin: false,
             meta: {
                 age: req.body.age,
                 website: req.body.website
-            }
+            }*/
         });      // create a new instance of the User model
 
 
